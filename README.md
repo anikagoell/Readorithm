@@ -40,8 +40,7 @@ readorithm/
 
 ## How to Run
 1. Make sure **Python** is installed on your system.  <br>
-2. Install required packages:
-    flask, numpy, pickle pandas<br>
+2. Install required packages: flask, numpy, pickle pandas<br>
 3.Make sure you have Git LFS installed to download .pkl files from GitHub.<br>
 4.Run the app<br>
 
