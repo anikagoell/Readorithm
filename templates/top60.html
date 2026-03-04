@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readorithm</title>
+    <link rel="icon" href="{{ url_for('static', filename='favi.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favi.png') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #0b1327f3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #040d1f;
+            padding: 20px 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .title {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .navlink {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 17px;
+            transition: 0.3s ease;
+        }
+
+        .navlink:hover {
+            color: #898fd1f0;
+        }
+
+        .navlink.active {
+            color: #898fd1f0;
+            font-weight: 600;
+            border-bottom: 2px solid #898fd1f0;
+            padding-bottom: 3px;
+            font-size: 18px;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
+            color: #cbd5e1;
+            background-color: #040d1f;
+            border-top: 1px solid #1e293b;
+        }
+        .hero {
+            padding: 60px 60px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+        .col-md-2 {
+            transition: transform 0.3s ease, box-shadow 0.4s ease;
+        }
+
+        .col-md-2:hover {
+            transform: translateY(-12px) scale(1.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.79);
+        }
+       
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="/static/favi.png" alt="Readorithm Logo" class="logo">
+        <span class="title ms-2">Readorithm</span>
+    </div>        
+    <div>
+            <a class="navlink " href="/">Home</a>
+            <a class="navlink active" href="/top60">Top Books</a>
+            <a class="navlink" href="/search">Search</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Top 60 Books</h1>
+        <p>Discover the most loved and influential books that have captivated readers across generations.</p>
+    </section>
+
+
+    <div class="container">
+        <div class="row">
+            {% for i in range(book_name|length) %}
+            <div class="col-md-2" style="margin-top:30px;">
+                <div class="card h-100 shadow" style="border: none;">
+                    <div class="card-body text-center" style="background-color: #ffffffd4; color: #020c17;">
+                        <img class="card-img-top mb-2" src="{{image[i]}}" alt="Book Cover">
+                        <h6 class="card-title">{{book_name[i]}}</h6>
+                        <p class="card-text">{{author[i]}}</p>
+                        <p class="card-text">Rating: {{ rating[i] }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    
+
+    <footer>
+        © 2026 Readorithm. All rights reserved.
+    </footer>
+
+</body>
+</html>

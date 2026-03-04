@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readorithm</title>
+    <link rel="icon" type="image/png" href="/static/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #0b1327f3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #040d1f;
+            padding: 20px 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .title {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .navlink {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 17px;
+            transition: 0.3s ease;
+        }
+
+        .navlink:hover {
+            color: #898fd1f0;
+        }
+
+        .navlink.active {
+            color: #898fd1f0;
+            font-weight: 600;
+            border-bottom: 2px solid #898fd1f0;
+            padding-bottom: 3px;
+            font-size: 18px;
+        }
+
+        .hero {
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-top: 15px;
+        }
+
+        .hero-btn {
+            margin-top: 30px;
+            padding: 12px 28px;
+            font-size: 18px;
+            background-color: #898fd1bd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #898fd1;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .section {
+            margin-top: 90px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section a {
+            text-decoration: none;
+            color: #fffffffa;
+        }
+
+        .section a:hover {
+            color: #ddeb1ceb;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
+            color: #cbd5e1;
+            background-color: #040d1f;
+            border-top: 1px solid #1e293b;
+        }
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="/static/favi.png" alt="Readorithm Logo" class="logo">
+        <span class="title ms-2">Readorithm</span>
+    </div>        
+    <div>
+            <a class="navlink active" href="/home">Home</a>
+            <a class="navlink" href="/top60">Top Books</a>
+            <a class="navlink" href="/search">Search</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Find Your Next Favorite Book</h1>
+        <p>Smart recommendations powered by intelligent algorithm tailored to your reading taste.</p>
+        <a href="/search">
+            <button class="hero-btn">Start Exploring</button>
+        </a>
+    </section>
+
+    <section class="section">
+        <h2><a href="/search">Discover Personalized Recommendations</a></h2>
+        <p>Enter a book you love and let Readorithm analyze patterns to suggest similar titles that match your interests.</p>
+    </section>
+
+    <section class="section">
+        <h2><a href="/top60">Explore Our Top 60 Books</a></h2>
+        <p>Browse through a curated collection of highly rated and widely loved books across multiple genres.</p>
+    </section>
+
+    <section class="section">
+        <h2><a href="/contact">Need Help?</a></h2>
+        <p>Have questions about recommendations? Get in touch and let us help you discover your perfect read.</p>
+    </section>
+
+    <footer>
+        © 2026 Readorithm. All rights reserved.
+    </footer>
+
+</body>
+</html>
