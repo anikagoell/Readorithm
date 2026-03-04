@@ -24,7 +24,7 @@ The idea is simple: instead of calculating everything every time, I save the dat
 ## Project Structure
 readorithm/
 │
-├── popular.pkl # Popular books data\n
+├── popular.pkl # Popular books data/n
 ├── ptable.pkl # Pivot table of books
 ├── book.pkl # Book details
 ├── costable.pkl # Cosine similarity matrix
